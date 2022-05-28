@@ -1,0 +1,118 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/constants/levels';
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/mixins/responsive';
+@use '/src/styles/mixins/position';
+
+.searchWrapper {
+  width: 660px;
+  margin: 0 auto;
+
+  .section {
+    padding-top: 80px;
+
+    .sectionTitle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 660px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      font-size: 2.125rem;
+      font-weight: 700;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .searchForm {
+      display: flex;
+    }
+
+    .searchInputWrap {
+      display: flex;
+      flex: 1;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 24px;
+      font-weight: 400;
+      line-height: 1.6;
+      letter-spacing: -0.018em;
+      background: colors.$WHITE;
+      border-top-left-radius: 42px;
+      border-bottom-left-radius: 42px;
+      -webkit-box-align: center;
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      .search {
+        width: 95%;
+
+        &::placeholder {
+          font-weight: bold;
+        }
+      }
+    }
+
+    .submitBtn {
+      padding: 18px 32px;
+      font-size: 1.125rem;
+      font-weight: 700;
+      line-height: 1.6;
+      color: colors.$WHITE;
+      letter-spacing: -0.018em;
+      cursor: pointer;
+      background-color: colors.$BLUEA;
+      border-width: 0;
+      border-top-right-radius: 42px;
+      border-bottom-right-radius: 42px;
+    }
+  }
+
+  .recommendList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 24px 24px 16px;
+    margin-top: 8px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+
+    &.hide {
+      display: none;
+    }
+
+    .recommendListTitle {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1.6;
+      color: colors.$GRAYB;
+      letter-spacing: -0.018em;
+    }
+
+    .listItem {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      cursor: pointer;
+      -webkit-box-align: center;
+    }
+  }
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  border: 0;
+}

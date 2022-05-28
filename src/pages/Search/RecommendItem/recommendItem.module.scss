@@ -1,0 +1,36 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/constants/levels';
+@use '/src/styles/mixins/flexbox';
+@use '/src/styles/mixins/responsive';
+@use '/src/styles/mixins/position';
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-box-align: center;
+
+  svg {
+    min-width: 16px;
+    height: 16px;
+  }
+
+  .textWrap {
+    display: flex;
+    width: calc(100% - 28px);
+    height: 25px;
+    margin-left: 12px;
+    font-weight: 500;
+    line-height: 25px;
+
+    mark {
+      font-weight: 900;
+      background-color: colors.$YELLOW;
+    }
+  }
+}

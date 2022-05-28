@@ -1,0 +1,19 @@
+@use '/src/styles/constants/colors';
+
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  height: 80px;
+  text-align: center;
+
+  .headerTitle {
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 50px;
+  }
+
+  .headerText {
+    color: colors.$BLACK;
+  }
+}

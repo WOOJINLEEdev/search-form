@@ -1,0 +1,9 @@
+@use '/src/styles/constants/colors';
+
+.main {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: 80px;
+  background: colors.$SKYBLUE;
+}
